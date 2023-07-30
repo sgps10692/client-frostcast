@@ -5,7 +5,6 @@ import fondo2 from '../../public/particulas.png';
 import fondo3 from '../../public/fondolineas.png';
 import prediccion from '../../public/prediccion.png';
 import pronosticos from '../../public/pronosticos.png';
-import avatar from '../../public/avatar06.png'
 
 const QueEs = () => {
   return (
@@ -34,37 +33,6 @@ const QueEs = () => {
             <Image src={prediccion} alt="Imagen 1" width={400} height={20} />
           </div>
         </div>
-        <div className="text-center mt-40">
-            <h2 className="text-4xl font-bold text-blue-500 mb-2 font-work-sans">Sobre Nosotros</h2>
-            <h1 className="text-6xl font-bold text-black font-work-sans">¿Cual Es El Equipo De Desarollo</h1>
-        </div>
-      <div className="flex justify-between space-x-40 py-4 px-8 mt-10">
-        <div className="flex flex-col items-center">
-          <Image src={avatar} alt="Miembro 1" width={200} height={100} className="w-50 h-50 rounded-full" />
-          <h3 className="text-lg font-bold mt-4">Julian Camacho</h3>
-          <p className="text-sm">Ingeniero</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={avatar} alt="Miembro 2" width={200} height={100} className="w-50 h-50 rounded-full" />
-          <h3 className="text-lg font-bold mt-4">Robinson Castillo</h3>
-          <p className="text-sm">Ingeniero</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={avatar} alt="Miembro 3" width={200} height={100} className="w-50 h-50 rounded-full" />
-          <h3 className="text-lg font-bold mt-4">Joseph López</h3>
-          <p className="text-sm">Semillero</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={avatar} alt="Miembro 4" width={200} height={100} className="w-50 h-50 rounded-full" />
-          <h3 className="text-lg font-bold mt-4">Juan Pablo</h3>
-          <p className="text-sm">Semilero</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <Image src={avatar} alt="Miembro 5" width={200} height={100} className="w-50 h-50 rounded-full" />
-          <h3 className="text-lg font-bold mt-4">Cristian</h3>
-          <p className="text-sm">Semillero</p>
-        </div>
-      </div>
     </div>
   );
 };
