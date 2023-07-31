@@ -7,7 +7,7 @@ export default function Login(props) {
   return (
     <div className="flex items-stretch justify-center h-screen">
       <div className="w-1/2 flex flex-col items-center justify-center bg-gray-200 p-8">
-      <Image src="/colombia2.png" alt="Logo Formulario" className="w-72 mx-auto mb-20 mt-8" width={250} height={25} priority />
+      <Image src="/colombia2.png" alt="Logo Formulario" className="w-72 mx-auto mb-20 mt-8" width={250} height={25}/>
         <h1 className="flex font-bold font-work-sans mb-6 text-center">
           <span className="text-black text-6xl">Machine </span>
           <span className="text-green-600 text-6xl">Learning</span>
@@ -15,6 +15,7 @@ export default function Login(props) {
         <form className="mb-4">
           <div className="mb-8">
             <input type="email" id="email"
+              autoComplete="email"
               className="block w-full rounded-md border-0 py-5 px-52 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:font-work-sans sm:text-lg sm:leading-6 pl-6"
               placeholder="Ingrese su email"
               value={email}
@@ -26,6 +27,7 @@ export default function Login(props) {
             <input
               type="password"
               id="password"
+              autoComplete="current-password"
               className="block w-full rounded-md border-0 py-5 px-52 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:font-work-sans sm:text-lg sm:leading-6 pl-6"
               placeholder="Ingrese su contraseña"
               value={password}

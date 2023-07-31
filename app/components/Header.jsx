@@ -8,8 +8,8 @@ function Header() {
     return (
         <header className="bg-white">
             <div className="flex justify-between items-center bg-white py-4 px-8">
-                <Image src="/gics.png" alt="Logo De Gics" className="w-auto h-auto" width={250} height={25} priority />
-                <Image src="/colombia2.png" alt="Logo Colombia potencia de la vida" className="w-auto h-auto" width={250} height={25} priority />
+                <Image src="/gics.png" alt="Logo De Gics" className="w-auto h-auto" width={250} height={25} />
+                <Image src="/colombia2.png" alt="Logo Colombia potencia de la vida" className="w-auto h-auto" width={250} height={25} />
             </div>
             <div className="bg-[#ecf8fe] p-5 mt-2 flex justify-between items-center py-4 px-8">
                 <ul className="flex space-x-9 items-center">

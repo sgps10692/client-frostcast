@@ -2,7 +2,6 @@ import React from 'react';
 import Image from 'next/image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
-import Imager from '../../public/variables.png';
 
 const Meteorologicas = () => {
   return (
@@ -37,7 +36,7 @@ const Meteorologicas = () => {
                 <li className="text-white text-xl flex items-center font-work-sans" style={{ whiteSpace: 'nowrap' }}>
                     <FontAwesomeIcon icon={faCircle} width={20} height={20} className="mr-4 mt-0"/>¡Y Mas!</li>
             </ul>
-            <Image src={Imager} alt="Imagen Del Dashboard" className="w-1/2"/>
+            <Image src="/variables.png" alt="Imagen Del Dashboard" width={1000} height={100} className="w-1/2 h-auto"/>
         </div>
         <div className="text-center mt-8">
         <button className="bg-green-600 text-white px-4 py-2 rounded-lg self-center mt-4 text-xl font-work-sans font-bold">¡Consultar!</button>
