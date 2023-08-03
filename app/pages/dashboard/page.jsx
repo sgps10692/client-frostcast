@@ -1,16 +1,14 @@
 'use client'
 import React from 'react';
 import DashboardMenu from '../../components/dashboard/DashboardMenu';
+import DashboardHeader from '../../components/dashboard/DashboardHeader';
 
 const DashboardPage = () => {
   return (
-    <div className="flex">
+    <div className="flex h-screen">
       <DashboardMenu />
-      <main className="flex-grow">
-        <h1 className="text-2xl font-bold">Bienvenido al Dashboard</h1>
-      </main>
-    </div>
+      <DashboardHeader />
+      </div>
   );
 };
-
 export default DashboardPage;

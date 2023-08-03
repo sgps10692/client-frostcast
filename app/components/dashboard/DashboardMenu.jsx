@@ -16,7 +16,7 @@ const DashboardMenu = () => {
   };
 
   return (
-    <div className={`h-screen flex flex-col justify-around rounded-r-lg bg-green-600 ${isExpanded ? 'w-88' : 'w-20'}`}>
+    <div className={`h-screen flex flex-col justify-around rounded-r-lg bg-green-600 ${isExpanded ? 'w-1/4' : 'w-24'}`}>
       <div className="p-5 my-4">
         <div className="flex items-center space-x-4">
           <Image src="/avatar06.png" alt="User Image" width={75} height={75} className="w-auto h-auto rounded-full" />
@@ -47,7 +47,7 @@ const DashboardMenu = () => {
           <MenuItem
             href=""
             icon="sun"
-            label="Variables Meteorologicas"
+            label={<div><span>Variables</span><br/><span>Meteorologicas</span></div>}
             active={activeLink === 'variables'}
             isExpanded={isExpanded}
             onClick={() => handleLinkClick('variables')}

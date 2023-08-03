@@ -2,21 +2,23 @@ import React from 'react';
 import Link from 'next/link';
 import { FiUser, FiMap, FiBell, FiLogOut, FiTrendingUp, FiSun } from 'react-icons/fi';
 
-const MenuItem = ({ href, active, icon, label, isExpanded, onClick }) => {
+const MenuItem = ({ href, active, icon, label, isExpanded, onClick }) => { // Add iconSize as prop
+
   const getIcon = () => {
+    const iconSize = isExpanded ? 25 : 26; // 30 for large size, 20 for default size
     switch (icon) {
       case 'user':
-        return <FiUser />;
+        return <FiUser size={iconSize} />; // Add size prop to the icons
       case 'map':
-        return <FiMap />;
+        return <FiMap size={iconSize} />;
       case 'bell':
-        return <FiBell />;
+        return <FiBell size={iconSize} />;
       case 'logout':
-        return <FiLogOut />;
+        return <FiLogOut size={iconSize} />;
       case 'trendingUp':
-        return <FiTrendingUp />;
+        return <FiTrendingUp size={iconSize} />;
       case 'sun':
-        return <FiSun />;
+        return <FiSun size={iconSize} />;
       default:
         return null;
     }
