@@ -1,20 +1,44 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import DashboardMenu from '../../components/dashboard/DashboardMenu';
 import DashboardHeader from '../../components/dashboard/DashboardHeader';
-import Notification from '../../components/dashboard/Notification';
-import CardsContainer from '../../components/dashboard/Card';
+import Notification from '../../components/dashboard/Notificacion';
+import Profile from '../../components/dashboard/Profile';
+import Mapa from '../../components/dashboard/Mapa';
+import Notificaciones from '../../components/dashboard/Notificaciones';
+import Predicciones from '../../components/dashboard/Prediciones';
+import Vari_Meteo from '../../components/dashboard/Vari_Meteo';
 
 const DashboardPage = () => {
+  const [showPart, setShowPart] = useState('map');
+
+  const renderComponent = () => {
+    switch (showPart) {
+      case 'map':
+        return <Mapa />;
+      case 'notifications':
+        return <Notificaciones />;
+      case 'predictions':
+        return <Predicciones />;
+      case 'variables':
+        return <Vari_Meteo />;
+      case 'profile':
+        return <Profile />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className="flex h-screen">
-      <DashboardMenu />
+      <DashboardMenu setShowPart={setShowPart}/>
       <div className="flex-grow flex flex-col">
         <DashboardHeader />
-        <CardsContainer />
+        {renderComponent()}
       </div>
       <Notification />
     </div>
   );
 };
+
 export default DashboardPage;

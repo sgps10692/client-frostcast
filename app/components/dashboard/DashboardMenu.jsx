@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FiChevronLeft, FiChevronRight, FiLogOut } from 'react-icons/fi';
 import MenuItem from './MenuItem';
 
-const DashboardMenu = () => {
+const DashboardMenu = ({ setShowPart}) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const [activeLink, setActiveLink] = useState('map');
 
@@ -13,6 +13,20 @@ const DashboardMenu = () => {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
+    switch (link) {
+      case 'map':
+        return setShowPart('map');
+      case 'notifications':
+        return setShowPart('notifications');
+      case 'predictions':
+        return setShowPart('predictions');
+      case 'variables':
+        return setShowPart('variables');
+      case 'profile':
+        return setShowPart('profile');
+      default:
+        return null;
+    }
   };
 
   return (
