@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { FiChevronLeft, FiChevronRight, FiLogOut } from 'react-icons/fi';
 import MenuItem from './MenuItem';
 
-const DashboardMenu = ({ setShowPart}) => {
+const DashboardMenu = ({ setShowPart }) => {
   const [isExpanded, setIsExpanded] = useState(true);
   const [activeLink, setActiveLink] = useState('map');
 
@@ -65,14 +65,6 @@ const DashboardMenu = ({ setShowPart}) => {
             active={activeLink === 'variables'}
             isExpanded={isExpanded}
             onClick={() => handleLinkClick('variables')}
-          />
-          <MenuItem
-            href=""
-            icon="bell"
-            label="Notificaciones"
-            active={activeLink === 'notifications'}
-            isExpanded={isExpanded}
-            onClick={() => handleLinkClick('notifications')}
           />
           <MenuItem
             href=""

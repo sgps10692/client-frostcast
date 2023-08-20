@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import DashboardMenu from '../../components/dashboard/DashboardMenu';
 import DashboardHeader from '../../components/dashboard/DashboardHeader';
 import Notification from '../../components/dashboard/Notificacion';
-import Profile from '../../components/dashboard/Profile';
+import Profile from '../../components/dashboard/Perfil';
 import Mapa from '../../components/dashboard/Mapa';
 import Notificaciones from '../../components/dashboard/Notificaciones';
 import Predicciones from '../../components/dashboard/Prediciones';
