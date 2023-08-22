@@ -2,12 +2,18 @@ import Image from "next/image";
 import GetPronosticos from "./components/GetPronostico";
 
 async function getUbicaciones() {
-  const res = await fetch("http://127.0.0.1:8000/api/locations/", {
-    cache: "no-cache",
-  });
-  const locations = await res.json();
+  try {
+    const res = await fetch("http://127.0.0.1:8000/api/locations/", {
+      cache: "no-cache",
+    });
+    const locations = await res.json();
 
-  return locations.data;
+    return locations.data;
+  } catch (error) {
+    console.error("Error fetching locations:", error);
+    // Puedes retornar un valor por defecto o un array vacío en caso de error
+    return [];
+  }
 }
 
 export default async function Homeu() {
