@@ -36,11 +36,15 @@ export default function GetPronosticos({ locations }) {
             onChange={handleLocationChange}
           >
             <option>--- SELECCIONE UNA UBICACIÓN ----</option>
-            {locations.map((location) => (
-              <option key={location.id} value={location.id}>
-                {location.name}
-              </option>
-            ))}
+            {locations && locations.length > 0 ? (
+              locations.map((location) => (
+                <option key={location.id} value={location.id}>
+                  {location.name}
+                </option>
+              ))
+            ) : (
+              <option>No hay locaciones disponibles</option>
+            )}
           </select>
         </div>
         <div className="bg-blue-400 w-full h-20 mt-4 rounded-lg">
