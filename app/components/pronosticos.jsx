@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GetPronosticos from "./components/GetPronostico";
+import GetPronosticos from "../pages/components/GetPronostico";
 
 async function getUbicaciones() {
   try {

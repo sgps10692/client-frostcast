@@ -1,7 +1,6 @@
-
 import React from "react";
 import Layout from "../app/layout";
-import Homeu from "../app/pages/pronosticos";
+import Homeu from "./components/pronosticos";
 import Meteorologicas from "../app/pages/variables";
 import QueEs from "../app/pages/que_es";
 import Nosotros from "../app/pages/sobre_nosotros";
