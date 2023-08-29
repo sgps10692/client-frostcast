@@ -36,9 +36,9 @@ export default async function Homeu() {
       <div className="text-center relative z-10">
         <h1 className="text-4xl font-bold text-blue-500 mb-1">¿Qué es?</h1>
         <h1 className="text-4xl font-bold font-work-sans mb-6">
-          MODELO DE MACHINE LEARNING
-          <br />
-          PARA PRONOSTICAR POSIBLES HELADAS
+          HERRAMIENTA PARA PRONÓSTICO DE VARIABLES
+          <br/>
+          CLIMÁTICAS FUNDAMENTALES EN AGRICULTURA Y HELADAS
         </h1>
       </div>
       <div className="h-screen flex items-center relative">
@@ -55,10 +55,8 @@ export default async function Homeu() {
               Desarrollo
             </h2>
             <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            A partir de información histórica de variables meteorológicas y de heladas e
+            implementando modelos de predicción basados en Machine Learning.
             </p>
           </div>
           <div className="flex flex-col items-center max-w-md text-center">
@@ -70,13 +68,11 @@ export default async function Homeu() {
               className="w-50 h-50 rounded-full"
             />
             <h2 className="text-2xl font-bold font-work-sans mt-4 text-center">
-              Variables Meteorologicas
+              Objetivo
             </h2>
             <p className="text-lg">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            Mejorar las decisiones tomadas en las actividades de la agricultura, 
+            buscando determinar patrones que garanticen mayor rendimiento y calidad de los cultivos
             </p>
           </div>
           <div className="flex flex-col items-center max-w-md text-center">
@@ -88,13 +84,10 @@ export default async function Homeu() {
               className="w-50 h-50 rounded-full"
             />
             <h2 className="text-2xl font-bold font-work-sans mt-4 text-center">
-              Equipo De Desarrollo
+              Equipo
             </h2>
             <p className="text-lg text-center">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+            Grupo GICS. Proyecto de investigación aplicada en el marco de la estrategia SENNOVA
             </p>
           </div>
 

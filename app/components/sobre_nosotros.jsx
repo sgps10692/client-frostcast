@@ -2,7 +2,7 @@ import Image from 'next/image'
 export default function Nosotros() {
     return (
         <div className="bg-white flex flex-col items-center relative py-4 px-8 z-10 m-6">
-        <div className="text-center mt-40">
+        <div className="text-center">
             <h2 className="text-4xl font-bold text-blue-500 mb-2 font-work-sans">Sobre Nosotros</h2>
             <h1 className="text-6xl font-bold text-black font-work-sans">¿Cual Es El Equipo De Desarollo</h1>
         </div>
