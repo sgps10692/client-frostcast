@@ -1,10 +1,12 @@
+
 import "./globals.css";
 
 export default function LandingLayout({ children }) {
   return (
     <html>
       <head></head>
-      <body>{children}</body>
+      <body>
+        {children}</body>
     </html>
   );
 }

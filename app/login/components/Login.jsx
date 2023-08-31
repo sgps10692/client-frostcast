@@ -17,8 +17,8 @@ export default function Login(props) {
           height={25}
         />
         <h1 className="flex font-bold font-work-sans mb-6 text-center">
-          <span className="text-black text-6xl">Machine </span>
-          <span className="text-green-600 text-6xl">Learning</span>
+          <span className="text-black text-6xl">Frost</span>
+          <span className="text-green-600 text-6xl">Cast</span>
         </h1>
         <form className="mb-4">
           <div className="mb-8">

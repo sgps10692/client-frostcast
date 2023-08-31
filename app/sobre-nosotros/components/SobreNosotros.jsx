@@ -1,38 +1,21 @@
 import Image from 'next/image'
 export default function Nosotros() {
     return (
-        <div className="bg-white flex flex-col items-center relative py-4 px-8 z-10 m-6">
-        <div className="text-center">
-            <h2 className="text-4xl font-bold text-blue-500 mb-2 font-work-sans">Sobre Nosotros</h2>
-            <h1 className="text-6xl font-bold text-black font-work-sans">¿Cual Es El Equipo De Desarollo</h1>
+     <>
+<div class="py-16 bg-white">  
+  <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+      <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
+        <div class="md:5/12 lg:w-5/12">
+        
         </div>
-        <div className="flex justify-between space-x-40 py-4 px-8 mt-10">
-    <div className="flex flex-col items-center">
-      <Image src="/avatar06.png" alt="Miembro 1" width={200} height={100} className="w-50 h-50 rounded-full" />
-      <h3 className="text-lg font-bold mt-4">Julian Camacho</h3>
-      <p className="text-sm">Ingeniero</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <Image src="/avatar06.png" alt="Miembro 2" width={200} height={100} className="w-50 h-50 rounded-full" />
-      <h3 className="text-lg font-bold mt-4">Robinson Castillo</h3>
-      <p className="text-sm">Ingeniero</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <Image src="/avatar06.png" alt="Miembro 3" width={200} height={100} className="w-50 h-50 rounded-full" />
-      <h3 className="text-lg font-bold mt-4">Joseph López</h3>
-      <p className="text-sm">Semillero</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <Image src="/avatar06.png" alt="Miembro 4" width={200} height={100} className="w-50 h-50 rounded-full" />
-      <h3 className="text-lg font-bold mt-4">Juan Pablo</h3>
-      <p className="text-sm">Semilero</p>
-    </div>
-    <div className="flex flex-col items-center">
-      <Image src="/avatar06.png" alt="Miembro 5" width={200} height={100} className="w-50 h-50 rounded-full" />
-      <h3 className="text-lg font-bold mt-4">Cristian</h3>
-      <p className="text-sm">Semillero</p>
-    </div>
+        <div class="md:7/12 lg:w-6/12">
+          <h2 class="text-2xl text-gray-900 font-bold md:text-4xl">Nuxt development is carried out by passionate developers</h2>
+          <p class="mt-6 text-gray-600">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum omnis voluptatem accusantium nemo perspiciatis delectus atque autem! Voluptatum tenetur beatae unde aperiam, repellat expedita consequatur! Officiis id consequatur atque doloremque!</p>
+          <p class="mt-4 text-gray-600"> Nobis minus voluptatibus pariatur dignissimos libero quaerat iure expedita at? Asperiores nemo possimus nesciunt dicta veniam aspernatur quam mollitia.</p>
+        </div>
+      </div>
   </div>
 </div>
+     </>
     ) 
   }

@@ -16,8 +16,8 @@ const DashboardMenu = () => {
             className="w-auto h-auto rounded-full"
           />
           <div className="block">
-            <h3 className="text-white text-lg">Nombre de Usuario</h3>
-            <p className="text-gray-300">Nombre de la Ciudad</p>
+            <h3 className="text-white text-lg">Gustavo</h3>
+            <p className="text-gray-300">Bogotá</p>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@ const DashboardMenu = () => {
               </div>
             }
           />
-          <MenuItem href="" icon="user" label="Perfil" />
+          <MenuItem href="/dashboard/perfil" icon="user" label="Perfil" />
         </nav>
       </div>
       <div className="p-5 my-8">

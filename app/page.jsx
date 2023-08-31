@@ -10,7 +10,6 @@ function Page() {
     <>
       <Header />
       <Pronostico />
-      <Variable />
       <QueEs />
       <Footer />
     </>
