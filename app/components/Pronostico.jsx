@@ -1,5 +1,5 @@
 import Image from "next/image";
-import GetPronosticos from "../pages/components/GetPronostico";
+import GetPronosticos from "./Fetch/GetPronostico";
 
 async function getUbicaciones() {
   try {
@@ -37,7 +37,7 @@ export default async function Homeu() {
         <h1 className="text-4xl font-bold text-blue-500 mb-1">¿Qué es?</h1>
         <h1 className="text-4xl font-bold font-work-sans mb-6">
           HERRAMIENTA PARA PRONÓSTICO DE VARIABLES
-          <br/>
+          <br />
           CLIMÁTICAS FUNDAMENTALES EN AGRICULTURA Y HELADAS
         </h1>
       </div>
@@ -55,8 +55,9 @@ export default async function Homeu() {
               Desarrollo
             </h2>
             <p className="text-lg">
-            A partir de información histórica de variables meteorológicas y de heladas e
-            implementando modelos de predicción basados en Machine Learning.
+              A partir de información histórica de variables meteorológicas y de
+              heladas e implementando modelos de predicción basados en Machine
+              Learning.
             </p>
           </div>
           <div className="flex flex-col items-center max-w-md text-center">
@@ -71,8 +72,9 @@ export default async function Homeu() {
               Objetivo
             </h2>
             <p className="text-lg">
-            Mejorar las decisiones tomadas en las actividades de la agricultura, 
-            buscando determinar patrones que garanticen mayor rendimiento y calidad de los cultivos
+              Mejorar las decisiones tomadas en las actividades de la
+              agricultura, buscando determinar patrones que garanticen mayor
+              rendimiento y calidad de los cultivos
             </p>
           </div>
           <div className="flex flex-col items-center max-w-md text-center">
@@ -87,7 +89,8 @@ export default async function Homeu() {
               Equipo
             </h2>
             <p className="text-lg text-center">
-            Grupo GICS. Proyecto de investigación aplicada en el marco de la estrategia SENNOVA
+              Grupo GICS. Proyecto de investigación aplicada en el marco de la
+              estrategia SENNOVA
             </p>
           </div>
 

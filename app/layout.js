@@ -1,17 +1,10 @@
-import './globals.css';
+import "./globals.css";
 
-
-export const metadata = {
-  title: 'Fros-Cast',
-  description: 'Proyecto De Investigacion FrostCast',
-}
-
-function Layout({ children }) {
+export default function LandingLayout({ children }) {
   return (
-    <html lang="en">
+    <html>
+      <head></head>
       <body>{children}</body>
     </html>
   );
 }
-
-export default Layout;

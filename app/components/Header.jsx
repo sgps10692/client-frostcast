@@ -36,10 +36,8 @@ function Header() {
               Inicio
             </a>
           </li>
-          <Link href="/pages/Nosotros" legacyBehavior>
-          <a className="font-work-sans text-xl">
+          <Link href="/sobre-nosotros" className="font-work-sans text-xl">
             Sobre Nosotros
-          </a>
           </Link>
         </ul>
         <div className="flex space-x-9 items-center">

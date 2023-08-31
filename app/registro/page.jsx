@@ -1,5 +1,4 @@
-"use client";
-import Register from "../pages/auth/Register";
+import Register from "./components/Register";
 
 const RegistroPage = () => {
   return (

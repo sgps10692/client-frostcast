@@ -1,5 +1,4 @@
-"use client";
-import Login from "../pages/auth/Login";
+import Login from "./components/Login";
 
 const InicioSesionPage = () => {
   return (
