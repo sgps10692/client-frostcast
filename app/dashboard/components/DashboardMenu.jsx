@@ -10,7 +10,7 @@ const DashboardMenu = () => {
         <div className="flex items-center space-x-4">
           <Image
             src="/avatar06.png"
-            alt="User Image"
+            alt="Imagen De Usuarios"
             width={75}
             height={75}
             className="w-auto h-auto rounded-full"
