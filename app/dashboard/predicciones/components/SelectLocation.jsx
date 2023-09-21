@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { Line, Bar } from "react-chartjs-2";
+
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -78,24 +79,24 @@ export default function SelectLocation({ locations }) {
   };
 
   const dataExample = {
-    labels:["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    labels: [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic",
+    ],
     datasets: [
       {
         label: "Probabilidad de Heladas",
-        data: [
-          15, 
-          14, 
-          3, 
-          5, 
-          0, 
-          0, 
-          0.5, 
-          0, 
-          2, 
-          0, 
-          2, 
-          4
-        ],
+        data: [15, 14, 3, 5, 0, 0, 0.5, 0, 2, 0, 2, 4],
         fill: false,
         borderColor: "rgba(75, 192, 192, 1)",
       },
@@ -110,71 +111,51 @@ export default function SelectLocation({ locations }) {
     },
   };
 
-
-
   const dataBar = {
-    labels: ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"],
+    labels: [
+      "Ene",
+      "Feb",
+      "Mar",
+      "Abr",
+      "May",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dic",
+    ],
     datasets: [
       {
-        data: [
-          15, 
-          14, 
-          3, 
-          5, 
-          0, 
-          0, 
-          0.5, 
-          0, 
-          2, 
-          0, 
-          2, 
-          4
-        ],
-        backgroundColor: 
-          "rgba(75, 192, 192, 0.6)",
-        borderColor:
-          "rgba(75, 192, 192, 1)",
+        data: [15, 14, 3, 5, 0, 0, 0.5, 0, 2, 0, 2, 4],
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 1,
       },
       {
         data: [
           10, //ene
-          7,  //feb
-          4,  //mar
-          5,  //abril
-          3,  // may
+          7, //feb
+          4, //mar
+          5, //abril
+          3, // may
           0.5, //jun
           0.5, //Jul
           1, //ago
           3, //sep
-          0.1,  //oc
-          0,  //nov
-          7.5 //dic
+          0.1, //oc
+          0, //nov
+          7.5, //dic
         ],
-        backgroundColor: 
-          "rgba(75, 192, 192, 0.6)",
-        borderColor:
-          "rgba(75, 192, 192, 1)",
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 1,
-      },{
-        data: [
-          15, 
-          6, 
-          2.5,
-          5, 
-          0.5, 
-          0, 
-          0.5,
-          0,
-          2, 
-          0.5, 
-          0.5, 
-          13
-        ],
-        backgroundColor: 
-          "rgba(75, 192, 192, 0.6)",
-        borderColor:
-          "rgba(75, 192, 192, 1)",
+      },
+      {
+        data: [15, 6, 2.5, 5, 0.5, 0, 0.5, 0, 2, 0.5, 0.5, 13],
+        backgroundColor: "rgba(75, 192, 192, 0.6)",
+        borderColor: "rgba(75, 192, 192, 1)",
         borderWidth: 1,
       },
     ],
@@ -184,20 +165,19 @@ export default function SelectLocation({ locations }) {
     scales: {
       y: {
         beginAtZero: true,
-        title :{
+        title: {
           display: true,
-          text: 'Porcentaje (%)'
+          text: "Porcentaje (%)",
         },
       },
     },
     plugins: {
       legend: {
         display: false,
-        position: 'top',
-      }
-    
-    }
-  }
+        position: "top",
+      },
+    },
+  };
 
   return (
     <>
@@ -254,33 +234,28 @@ export default function SelectLocation({ locations }) {
         </div>
       </div>
 
-
       <div className="grid grid-cols-2 gap-8 mt-5">
-      <div className="p-8 bg-gray-100">
+        <div className="p-8 bg-gray-100">
           <h2 className="text-2xl mb-4">Porcentaje de Ocurrencia de Heladas</h2>
-          <small> {data ? (data.location.name) : ("Nueva Generación")}</small><br/>
+          <small> {data ? data.location.name : "Nueva Generación"}</small>
+          <br />
           <div className="bg-white p-2 mt-5 rounded-md shadow-md">
-            <Bar data={dataBar} options={optionsBar}  />
+            <Bar data={dataBar} options={optionsBar} />
           </div>
         </div>
         <div className="p-8 bg-gray-100">
-          <h2 className="text-2xl mb-4">Número de heladas registradas por año</h2>
-          <small> {data ? (data.location.name) : ("Nueva Generación")}</small><br/>
+          <h2 className="text-2xl mb-4">
+            Número de heladas registradas por año
+          </h2>
+          <small> {data ? data.location.name : "Nueva Generación"}</small>
+          <br />
           <div className="bg-white p-2 mt-5 rounded-md shadow-md">
             <Line data={dataExample} options={options} />
           </div>
         </div>
-
-        </div>
-
-      <div className="grid grid-cols-1 gap-8 mt-5">
-        
-       
       </div>
 
-
-
-   
+      <div className="grid grid-cols-1 gap-8 mt-5"></div>
     </>
   );
 }

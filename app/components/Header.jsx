@@ -39,6 +39,12 @@ function Header() {
           <Link href="/sobre-nosotros" className="font-work-sans text-xl">
             Sobre Nosotros
           </Link>
+          <Link
+            href="/que-hacer-en-caso-de-heladas"
+            className="font-work-sans text-xl"
+          >
+            Qué Hacer en Caso de Heladas
+          </Link>
         </ul>
         <div className="flex space-x-9 items-center">
           <Link href="/login" legacyBehavior>
