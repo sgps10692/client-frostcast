@@ -1,10 +1,10 @@
 import Image from "next/image";
 export default function Nosotros() {
   return (
-    <>
+    <div>
       <div class="container mx-auto py-8">
         <div class="bg-white p-6 rounded-lg shadow-md">
-          <h2 class="text-2xl font-semibold mb-4">Nuestra Historia</h2>
+          <h2 class="text-2xl font-semibold mb-4">¿Como Empezo Todo?</h2>
           <p class="text-gray-700">
             Somos un equipo de apasionados por la jardinería y la agricultura.
             Nuestra historia comenzó hace más de una década cuando un grupo de
@@ -37,6 +37,6 @@ export default function Nosotros() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
