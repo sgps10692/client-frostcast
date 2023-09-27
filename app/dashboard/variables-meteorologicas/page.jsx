@@ -23,11 +23,8 @@ export default async function VariableMeteorologica() {
         <h1 className="text-3xl font-semibold mb-6">
           Variables Meteorológicas
         </h1>
-        <div className="grid grid-cols-2 gap-8">
-          <div>
-            <SelectLocation locations={locations}></SelectLocation>
-          </div>
-        </div>
+
+        <SelectLocation locations={locations}></SelectLocation>
       </div>
     </>
   );
