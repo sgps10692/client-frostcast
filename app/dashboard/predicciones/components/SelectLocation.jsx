@@ -1,6 +1,14 @@
 "use client";
 import { useState } from "react";
 import { Line, Bar } from "react-chartjs-2";
+import { DateTime } from "luxon";
+import {
+  WiDaySunny,
+  WiThermometer,
+  WiStrongWind,
+  WiFog,
+  WiHumidity,
+} from "react-icons/wi";
 
 import {
   Chart as ChartJS,
@@ -201,36 +209,68 @@ export default function SelectLocation({ locations }) {
           </div>
         </div>
         <div>
-          {data ? (
-            <div className="text-center pt-4">
-              {data.prediccion_reciente ? (
-                <div>
-                  <p>
-                    Probabilidad de heladas:
-                    {data.prediccion_reciente.probability}%
-                  </p>
-                  <p>Fecha: {data.prediccion_reciente.date}</p>
-                </div>
-              ) : (
-                "No hay predicción de helada"
-              )}
-              {data.valores_meteorologicos ? (
-                <div>
-                  {data.valores_meteorologicos.map((valor) => (
-                    <p>
-                      {valor.parameter.name} : {valor.value}
-                    </p>
-                  ))}
-                </div>
-              ) : (
-                "No hay valores meteorologicos"
-              )}
-            </div>
-          ) : (
-            <p className="text-center pt-4">
-              No hay datos de predicción disponibles.
-            </p>
-          )}
+          <div className="bg-white p-4 rounded-lg shadow-md">
+            {data ? (
+              <div className="grid grid-cols-2 gap-4">
+                {data.valores_meteorologicos ? (
+                  data.valores_meteorologicos.map((valor) => (
+                    <div key={valor.id} className="flex items-center">
+                      {valor.parameter.variable.name === "Temperatura" && (
+                        <WiThermometer
+                          className="text-blue-500 mr-2"
+                          size={24}
+                        />
+                      )}
+                      {valor.parameter.variable.name === "Humedad" && (
+                        <WiHumidity className="text-green-500 mr-2" size={24} />
+                      )}
+                      <div>
+                        <p className="text-sm">{valor.parameter.name}</p>
+                        <p className="font-semibold">{valor.value}</p>
+                      </div>
+                    </div>
+                  ))
+                ) : (
+                  <p>No hay valores meteorológicos</p>
+                )}
+                {data.prediccion_reciente ? (
+                  <div className="flex items-center">
+                    <WiDaySunny
+                      className={`${
+                        data.prediccion_reciente.probability > 50
+                          ? "text-red-500"
+                          : "text-green-500"
+                      } mr-2`}
+                      size={24}
+                    />
+                    <div>
+                      <p className="text-sm">Predicción de Helada</p>
+                      <p
+                        className={`font-semibold ${
+                          data.prediccion_reciente.probability > 50
+                            ? "text-red-500"
+                            : "text-green-500"
+                        }`}
+                      >
+                        {data.prediccion_reciente.probability > 50
+                          ? "¡Helada!"
+                          : "Sin Helada"}
+                      </p>
+                      <p className="text-xs">
+                        Probabilidad: {data.prediccion_reciente.probability}%
+                      </p>
+                    </div>
+                  </div>
+                ) : (
+                  <p>No hay predicción de helada</p>
+                )}
+              </div>
+            ) : (
+              <p className="text-center pt-4">
+                No hay datos de predicción disponibles.
+              </p>
+            )}
+          </div>
         </div>
       </div>
 

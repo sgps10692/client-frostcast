@@ -15,8 +15,25 @@ async function getUbicaciones() {
   }
 }
 
+async function getTemperatura() {
+  try {
+    const res = await fetch(
+      "https://api.thingspeak.com/channels/1848327/fields/2.json",
+      { next: { revalidate: 10 } }
+    );
+    const temperatura = await res.json();
+
+    return temperatura;
+  } catch (error) {
+    console.error("Error fetching temperatura:", error);
+    // Puedes retornar un valor por defecto o un array vacío en caso de error
+    return [];
+  }
+}
+
 export default async function Predicciones() {
   const locations = await getUbicaciones();
+  const temperatura = await getTemperatura();
   return (
     <>
       <div className="container mx-auto p-6">
@@ -24,6 +41,14 @@ export default async function Predicciones() {
         <ComoPrevenirHelada />
         <SelectLocation locations={locations}></SelectLocation>
       </div>
+
+      {temperatura.feeds.map((feed) => (
+        <div>
+          <h3>
+            Valor: {feed.field2} - Id {feed.entry_id}
+          </h3>
+        </div>
+      ))}
     </>
   );
 }

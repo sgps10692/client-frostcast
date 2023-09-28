@@ -34,15 +34,22 @@ export default async function Homeu() {
         style={{ backgroundImage: `url(/fondo3.png)` }}
       ></div>
       <div className="text-center relative z-10">
-        <h1 className="text-4xl font-bold text-blue-500 mb-1">¿Qué es?</h1>
-        <h1 className="text-4xl font-bold font-work-sans mb-6">
-          HERRAMIENTA PARA PRONÓSTICO DE VARIABLES
-          <br />
-          CLIMÁTICAS FUNDAMENTALES EN AGRICULTURA Y HELADAS
+        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-400">
+            {" "}
+            Herramienta para Pronóstico de Variables Climáticas
+          </span>{" "}
+        </h1>
+        <br></br>
+        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-400">
+            {" "}
+            Fundamentales en Agricultura y Heladas
+          </span>{" "}
         </h1>
       </div>
       <div className="h-screen flex items-center relative">
-        <div className="flex justify-between space-x-8 py-4 px-8">
+        <div className="flex justify-between space-x-8 py-2 px-3">
           <div className="flex flex-col items-center max-w-md text-center">
             <Image
               src="/desarrollo.png"
@@ -51,9 +58,7 @@ export default async function Homeu() {
               height={500}
               className="w-42 h-50 "
             />
-            <h2 className="text-2xl font-bold font-work-sans mt-4 text-center">
-              Desarrollo
-            </h2>
+            <h2 className="text-3xl font-bold text-emerald-900">Desarrollo</h2>
             <p className="text-lg">
               A partir de información histórica de variables meteorológicas y de
               heladas e implementando modelos de predicción basados en Machine
@@ -68,9 +73,7 @@ export default async function Homeu() {
               height={500}
               className="w-50 h-50 rounded-full"
             />
-            <h2 className="text-2xl font-bold font-work-sans mt-4 text-center">
-              Objetivo
-            </h2>
+            <h2 className="text-3xl font-bold text-emerald-900">Objetivo</h2>
             <p className="text-lg">
               Mejorar las decisiones tomadas en las actividades de la
               agricultura, buscando determinar patrones que garanticen mayor
@@ -85,9 +88,7 @@ export default async function Homeu() {
               height={500}
               className="w-50 h-50 rounded-full"
             />
-            <h2 className="text-2xl font-bold font-work-sans mt-4 text-center">
-              Equipo
-            </h2>
+            <h2 className="text-3xl font-bold text-emerald-900">Equipo</h2>
             <p className="text-lg text-center">
               Grupo GICS. Proyecto de investigación aplicada en el marco de la
               estrategia SENNOVA

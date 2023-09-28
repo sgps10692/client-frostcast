@@ -9,13 +9,9 @@ export default function DashboardLayout({ children }) {
     <html>
       <head></head>
       <body className="bg-gray-100">
-        <div className="flex h-screen">
+        <div className="flex">
           <DashboardMenu />
-          <div className="flex-grow flex flex-col">
-            <DashboardHeader />
-            {children}
-          </div>
-          <Notification />
+          {children}
         </div>
       </body>
     </html>

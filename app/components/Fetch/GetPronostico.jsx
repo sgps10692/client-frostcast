@@ -1,5 +1,13 @@
 "use client";
+import { DateTime } from "luxon";
 import { useState } from "react";
+import {
+  WiDaySunny,
+  WiThermometer,
+  WiStrongWind,
+  WiFog,
+  WiHumidity,
+} from "react-icons/wi";
 
 export default function GetPronosticos({ locations }) {
   const [data, setData] = useState(null);
@@ -24,18 +32,23 @@ export default function GetPronosticos({ locations }) {
     await fetchPredictions(newSelectLocation);
   };
 
+  const fechaActual = DateTime.now().setLocale("es");
+
+  // Formatea la fecha en el estilo deseado
+  const fechaFormateada = fechaActual.toFormat("'Hoy' d 'de,' LLLL");
+
   return (
     <>
       <div className="bg-white w-1/3 flex flex-col p-6 rounded-md mt-8">
-        <h1 className="text-2xl font-bold mb-4 text-center">
-          ¡CONSULTA PRONOSTICOS Y PREDICIONES AHORA!
+        <h1 className="text-xl font-bold mb-4 text-center">
+          CONSULTAR PRONOSTICOS
         </h1>
         <div className="relative w-full">
           <select
             className="bg-transparent border border-transparent text-blue-500 rounded-lg w-full text-left text-xl"
             onChange={handleLocationChange}
           >
-            <option>--- SELECCIONE UNA UBICACIÓN ----</option>
+            <option>Selecciona una ubicación</option>
             {locations && locations.length > 0 ? (
               locations.map((location) => (
                 <option key={location.id} value={location.id}>
@@ -47,30 +60,57 @@ export default function GetPronosticos({ locations }) {
             )}
           </select>
         </div>
-        <div className="bg-blue-400 w-full h-20 mt-4 rounded-lg">
+        <div className="bg-white p-4 rounded-lg shadow-md">
           {data ? (
-            <div className="text-center pt-4">
-              {data.prediccion_reciente ? (
-                <div>
-                  <p>
-                    Probabilidad de heladas:
-                    {data.prediccion_reciente.probability}%
-                  </p>
-                  <p>Fecha: {data.prediccion_reciente.date}</p>
-                </div>
-              ) : (
-                "No hay predicción de helada"
-              )}
+            <div className="grid grid-cols-2 gap-4">
               {data.valores_meteorologicos ? (
-                <div>
-                  {data.valores_meteorologicos.map((valor) => (
-                    <p>
-                      {valor.parameter.name} : {valor.value}
+                data.valores_meteorologicos.map((valor) => (
+                  <div key={valor.id} className="flex items-center">
+                    {valor.parameter.variable.name === "Temperatura" && (
+                      <WiThermometer className="text-blue-500 mr-2" size={24} />
+                    )}
+                    {valor.parameter.variable.name === "Humedad" && (
+                      <WiHumidity className="text-green-500 mr-2" size={24} />
+                    )}
+                    <div>
+                      <p className="text-sm">{valor.parameter.name}</p>
+                      <p className="font-semibold">{valor.value}</p>
+                    </div>
+                  </div>
+                ))
+              ) : (
+                <p>No hay valores meteorológicos</p>
+              )}
+              {data.prediccion_reciente ? (
+                <div className="flex items-center">
+                  <WiDaySunny
+                    className={`${
+                      data.prediccion_reciente.probability > 50
+                        ? "text-red-500"
+                        : "text-green-500"
+                    } mr-2`}
+                    size={24}
+                  />
+                  <div>
+                    <p className="text-sm">Predicción de Helada</p>
+                    <p
+                      className={`font-semibold ${
+                        data.prediccion_reciente.probability > 50
+                          ? "text-red-500"
+                          : "text-green-500"
+                      }`}
+                    >
+                      {data.prediccion_reciente.probability > 50
+                        ? "¡Helada!"
+                        : "Sin Helada"}
                     </p>
-                  ))}
+                    <p className="text-xs">
+                      Probabilidad: {data.prediccion_reciente.probability}%
+                    </p>
+                  </div>
                 </div>
               ) : (
-                "No hay valores meteorologicos"
+                <p>No hay predicción de helada</p>
               )}
             </div>
           ) : (
@@ -79,9 +119,6 @@ export default function GetPronosticos({ locations }) {
             </p>
           )}
         </div>
-        <button className="bg-green-600 text-white px-4 py-2 rounded-lg self-center mt-4 text-xl font-work-sans font-bold">
-          Más información
-        </button>
       </div>
     </>
   );

@@ -298,19 +298,7 @@ export default function SelectLocation({ locations }) {
             <Line data={chartDataTemperatura} options={optionsTemperatura} />
           </div>
         </div>
-        <div className="p-8 bg-gray-100">
-          <h2 className="text-2xl mb-4">
-            Número de heladas registradas por año
-          </h2>
-          <small> {data ? data.location.name : "Nueva Generación"}</small>
-          <br />
-          <div className="bg-white p-2 mt-5 rounded-md shadow-md">
-            <Line data={dataExample} options={options} />
-          </div>
-        </div>
       </div>
-
-      <div className="grid grid-cols-1 gap-8 mt-5"></div>
     </>
   );
 }
