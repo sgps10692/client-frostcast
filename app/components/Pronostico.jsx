@@ -34,15 +34,15 @@ export default async function Homeu() {
         style={{ backgroundImage: `url(/fondo3.png)` }}
       ></div>
       <div className="text-center relative z-10">
-        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-400">
+        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-400">
             {" "}
             Herramienta para Pronóstico de Variables Climáticas
           </span>{" "}
         </h1>
         <br></br>
-        <h1 class="text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-          <span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-400">
+        <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-800 from-sky-400">
             {" "}
             Fundamentales en Agricultura y Heladas
           </span>{" "}

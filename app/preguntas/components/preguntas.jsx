@@ -4,12 +4,6 @@ import React, { useEffect } from 'react';
 export default function PreguntasFrecuentesComponente() {
     useEffect(() => { 
         const accordionItems = [
-            {
-                id: 'accordion-flush-heading-6',
-                triggerEl: document.querySelector('#accordion-flush-heading-6'),
-                targetEl: document.querySelector('#accordion-flush-body-6'),
-                active: false
-            },
         {
             id: 'accordion-flush-heading-1',
             triggerEl: document.querySelector('#accordion-flush-heading-1'),
@@ -44,7 +38,7 @@ export default function PreguntasFrecuentesComponente() {
     
     // options with default values
     const options = {
-        alwaysOpen: false,
+        alwaysOpen: true,
         activeClasses: 'bg-gray dark:bg-gray-800 text-gray-900 dark:text-white',
         inactiveClasses: 'text-gray-500 dark:text-gray-400',
         onOpen: (item) => {
@@ -138,7 +132,6 @@ export default function PreguntasFrecuentesComponente() {
       <p className="text-gray-500 dark:text-gray-400">Sin embargo, nuestro modelo ha sido entrenado con un amplio conjunto de datos y ha demostrado una alta precisión en la predicción de heladas en estudios previos.</p>
     </div>
   </div>
-</div>
 <h2 id="accordion-flush-heading-5">
     <button type="button" className="flex font-work-sans font-semibold items-center justify-between w-full py-5 text-2xl text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
       <span>5. ¿Cómo puedo utilizar las predicciones en mi trabajo agrícola?</span>
@@ -154,6 +147,7 @@ export default function PreguntasFrecuentesComponente() {
       <p className="text-gray-500 dark:text-gray-400">Chequea nuestra guia/pagina <a href="/que-hacer-en-caso-de-heladas" className="text-blue-500 dark:text-blue-500 hover:underline">¿Que Hacer en Caso De Heladas?</a> y podras aprender un poco para tener un buen cuidado de tus cultivos</p>
     </div>
   </div>
+</div>
 </div>
     </>
   );
