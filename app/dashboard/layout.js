@@ -9,9 +9,19 @@ export default function DashboardLayout({ children }) {
     <html>
       <head></head>
       <body className="bg-gray-100">
-        <div className="flex">
+        <div className="flex flex-col lg:flex-row lg:flex-wrap">
+          {/* Menú lateral */}
           <DashboardMenu />
-          {children}
+          {/* Contenido principal */}
+          <main className="lg:flex-1 p-4 flex flex-col min-h-screen">
+            {/* Encabezado del contenido principal */}
+            <header className="bg-white p-4 shadow mb-4">
+              {/* Contenido del encabezado */}
+            </header>
+
+            {/* Contenido del cuerpo */}
+            <div className="bg-white p-4 shadow flex-1">{children}</div>
+          </main>
         </div>
       </body>
     </html>

@@ -52,7 +52,7 @@ export default function GetPronosticos({ locations }) {
             {locations && locations.length > 0 ? (
               locations.map((location) => (
                 <option key={location.id} value={location.id}>
-                  {location.name}
+                  {`${location.name} ${location.city}`.toUpperCase()}
                 </option>
               ))
             ) : (
