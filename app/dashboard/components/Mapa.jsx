@@ -1,29 +1,22 @@
-"use client";
-
-import React, { useState } from "react";
 import Image from "next/image";
+import ModalMapa from "./Data/Modal";
 
-export default function WeatherStationPage() {
-  const [selectedStation, setSelectedStation] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+async function getUbicaciones() {
+  try {
+    const res = await fetch("http://127.0.0.1:8000/api/locations/", {
+      cache: "no-cache",
+    });
+    const locations = await res.json();
 
-  // Función para abrir el modal
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  // Función para cerrar el modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
-  // Supongamos que tienes una lista de estaciones meteorológicas
-  const weatherStations = [
-    { id: 1, name: "Estación A" },
-    { id: 2, name: "Estación B" },
-    { id: 3, name: "Estación C" },
-    // ... Más estaciones
-  ];
+    return locations.data;
+  } catch (error) {
+    console.error("Error fetching locations:", error);
+    // Puedes retornar un valor por defecto o un array vacío en caso de error
+    return [];
+  }
+}
+export default async function WeatherStationPage() {
+  const weatherStations = await getUbicaciones();
 
   return (
     <div className="container mx-auto p-6 flex">
@@ -32,24 +25,7 @@ export default function WeatherStationPage() {
         <h2 className="text-2xl font-bold mb-4">
           Selecciona una Estación Meteorológica
         </h2>
-        <select
-          className="w-full p-2 border rounded"
-          value={selectedStation}
-          onChange={(e) => setSelectedStation(e.target.value)}
-        >
-          <option value="">-- Selecciona una estación --</option>
-          {weatherStations.map((station) => (
-            <option key={station.id} value={station.id}>
-              {station.name}
-            </option>
-          ))}
-        </select>
-        <button
-          className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-          onClick={openModal} // Abre el modal al hacer clic
-        >
-          Ver Detalles
-        </button>
+        <ModalMapa locations={weatherStations} />
       </div>
 
       {/* Columna derecha con el mapa */}
@@ -68,24 +44,6 @@ export default function WeatherStationPage() {
           />
         </div>
       </div>
-
-      {/* Modal para mostrar detalles de la estación seleccionada */}
-      {isModalOpen && selectedStation && (
-        <div className="fixed inset-0 flex items-center justify-center z-50">
-          <div className="bg-white p-4 rounded-lg shadow-md">
-            {/* Aquí puedes mostrar los detalles de la estación seleccionada */}
-            <h3 className="text-xl font-bold mb-2">Detalles de la Estación</h3>
-            <p>Nombre: {selectedStation}</p>
-            {/* Otros detalles */}
-            <button
-              className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-              onClick={closeModal} // Cierra el modal al hacer clic
-            >
-              Cerrar
-            </button>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
