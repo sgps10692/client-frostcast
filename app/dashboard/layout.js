@@ -15,8 +15,10 @@ export default function DashboardLayout({ children }) {
           {/* Contenido principal */}
           <main className="lg:flex-1 p-4 flex flex-col min-h-screen">
             {/* Encabezado del contenido principal */}
-            <header className="bg-white p-4 shadow mb-4">
+            <Notification/>
+            <header className="mb-4">
               {/* Contenido del encabezado */}
+              <DashboardHeader/>
             </header>
 
             {/* Contenido del cuerpo */}
