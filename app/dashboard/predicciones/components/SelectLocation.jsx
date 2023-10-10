@@ -9,6 +9,7 @@ import {
   WiFog,
   WiHumidity,
 } from "react-icons/wi";
+import { FaWind, FaCloudRain } from "react-icons/fa";
 
 import {
   Chart as ChartJS,
@@ -224,7 +225,7 @@ export default function SelectLocation({ locations }) {
                       {valor.parameter.variable.name === "Humedad" && (
                         <WiHumidity className="text-green-500 mr-2" size={24} />
                       )}
-                      {valor.parameter.variable.name === "Precipitación" && (
+                      {valor.parameter.variable.name === "Precipitacion" && (
                         <FaCloudRain // Utiliza el icono de precipitación de react-icons
                           className="text-purple-500 mr-2"
                           size={24}
