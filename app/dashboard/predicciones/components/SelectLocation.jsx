@@ -224,6 +224,19 @@ export default function SelectLocation({ locations }) {
                       {valor.parameter.variable.name === "Humedad" && (
                         <WiHumidity className="text-green-500 mr-2" size={24} />
                       )}
+                      {valor.parameter.variable.name === "Precipitación" && (
+                        <FaCloudRain // Utiliza el icono de precipitación de react-icons
+                          className="text-purple-500 mr-2"
+                          size={24}
+                        />
+                      )}
+                      {valor.parameter.variable.name ===
+                        "Velocidad del Viento" && (
+                        <FaWind // Utiliza el icono de velocidad del viento de react-icons
+                          className="text-yellow-500 mr-2"
+                          size={24}
+                        />
+                      )}
                       <div>
                         <p className="text-sm">{valor.parameter.name}</p>
                         <p className="font-semibold">{valor.value}</p>
