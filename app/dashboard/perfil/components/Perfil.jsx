@@ -12,15 +12,10 @@ export default function Perfil() {
       <div className="bg-gray-200 rounded-lg p-4 m-8">
         <div className="flex justify-between">
           <div className="flex flex-col justify-between">
-            <h2 className="text-3xl font-semibold">Scorpion</h2>
+            <h2 className="text-3xl font-semibold">Juan Pablo</h2>
             <div>
               <p className="text-black text-xl font-semibold">Descripción:</p>
-              <p className="text-lg text-gray-500">
-                Hanzo Hasashi fue una vez miembro del clan ninja japonés Shirai
-                Ryu. Dado el nombre de Scorpion por su habilidad de lucha
-                cegadoramente rápida y mortal, su vida fue bendecida con un
-                glorioso kombat en nombre de su Gran Maestro.
-              </p>
+              <p className="text-lg text-gray-500"></p>
             </div>
           </div>
           <div className="relative flex-grow-0 mr-8">
