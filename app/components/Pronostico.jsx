@@ -91,7 +91,7 @@ export default async function Homeu() {
             <h2 className="text-3xl font-bold text-emerald-900">Equipo</h2>
             <p className="text-lg text-center">
               Grupo GICS. Proyecto de investigación aplicada en el marco de la
-              estrategia SENNOVA
+              estrategia SENNOVA <a href="/sobre-nosotros" className="text-emerald-900 dark:text-blue-500 hover:underline">Saber Mas..</a>
             </p>
           </div>
 

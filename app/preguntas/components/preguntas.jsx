@@ -59,6 +59,12 @@ export default function PreguntasFrecuentesComponente() {
     
   return (
     <>
+    <div className="relative flex flex-col">
+      <div
+        className="absolute inset-0 bg-repeat"
+        style={{ backgroundImage: `url(/particulas.png)`}}
+      ></div>
+    <div className='relative'>
       <div className="mx-40 text-center m-8">
           <h2 className="text-4xl font-bold text-blue-500 mb-2 font-work-sans">
             Seccion De Preguntas
@@ -147,6 +153,8 @@ export default function PreguntasFrecuentesComponente() {
       <p className="text-gray-500 dark:text-gray-400">Chequea nuestra guia/pagina <a href="/que-hacer-en-caso-de-heladas" className="text-blue-500 dark:text-blue-500 hover:underline">¿Que Hacer en Caso De Heladas?</a> y podras aprender un poco para tener un buen cuidado de tus cultivos</p>
     </div>
   </div>
+</div>
+</div>
 </div>
 </div>
     </>

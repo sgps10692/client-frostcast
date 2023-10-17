@@ -105,7 +105,7 @@ export default function ModalMapa({ locations }) {
               {/* Información de la ubicación */}
               <div className="m-4">
                 <p className="text-lg font-semibold">
-                  Nombre: {data.location ? data.location.name : "No disponible"}
+                  Nombre De La locación: {data.location ? data.location.name : "No disponible"}
                 </p>
                 {/* Agrega aquí más detalles si es necesario */}
               </div>
@@ -114,7 +114,7 @@ export default function ModalMapa({ locations }) {
               {data.valores_meteorologicos ? (
                 <div className="m-4">
                   <h4 className="text-lg font-semibold">
-                    Valores Meteorológicos
+                    Valores Meteorológicos:
                   </h4>
                   {data.valores_meteorologicos.map((valor) => (
                     <div key={valor.id} className="flex items-center">
@@ -155,7 +155,7 @@ export default function ModalMapa({ locations }) {
               {data.prediccion_reciente ? (
                 <div className="m-4">
                   <h4 className="text-lg font-semibold">
-                    Predicción de Helada
+                    Predicción de Helada:
                   </h4>
                   <div className="flex items-center">
                     <WiDaySunny
@@ -191,14 +191,14 @@ export default function ModalMapa({ locations }) {
             </div>
             <div className="flex items-center justify-between space-x-2 border-t mt-4 border-gray-200 rounded-b m dark:border-gray-600">
               <Image
-                src="/frostderecha.png"
+                src="/frostcast.png"
                 alt="Logo Sena"
                 width={200}
                 height={200}
               />
               {/* Botón de cierre */}
               <button
-                className="text-white bg-green-600 hover:bg-green-500 font-work-sans ml-auto font-w font-bold py-3 px-8 rounded focus:outline-none focus:shadow-outline"
+                className="text-white bg-green-600 hover:bg-green-500 font-work-sans ml-auto font-bold py-3 px-5 rounded focus:outline-none focus:shadow-outline"
                 onClick={closeModal}
               >
                 Cerrar

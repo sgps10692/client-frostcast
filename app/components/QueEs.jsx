@@ -7,6 +7,11 @@ import fondo3 from "../../public/fondolineas.png";
 const QueEs = () => {
   return (
     <div className="bg-white flex flex-col items-center relative py-10 px-8 z-10 m-6">
+      <div
+        className="absolute inset-0 bg-no-repeat"
+        style={{ backgroundImage: `url(/fondolineas.png)`,zIndex: 0}}
+      ></div>
+      <div className="relative">
       <div className="flex justify-around mt-10 items-center">
         <div className="mx-40">
           <Image
@@ -46,6 +51,7 @@ const QueEs = () => {
           <Image src="/prediccion.png" alt="Imagen 1" width={400} height={20} />
         </div>
       </div>
+    </div>
     </div>
   );
 };

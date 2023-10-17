@@ -45,12 +45,6 @@ function Header() {
           >
             Qué Hacer en Caso de Heladas
           </Link>
-          <Link
-            href="/preguntas"
-            className="font-work-sans text-xl"
-          >
-            Preguntas Frecuentes
-          </Link>
         </ul>
         <div className="flex space-x-9 items-center">
           <Link href="/login" legacyBehavior>

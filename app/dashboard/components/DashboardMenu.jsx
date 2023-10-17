@@ -25,8 +25,8 @@ const links = [
 export default function Sidebar() {
   return (
     <aside className="flex w-20 flex-col items-center border-r border-gray-200 bg-green-600 overflow-y-auto flex-shrink-0">
-      <div className="flex h-[4.5rem] w-full items-center justify-center border-b border-gray-200 p-2">
-        <Image src="/senaverda.png" width="200" height="200"></Image>
+      <div className="flex h-[4.5rem] w-full items-center justify-center border-b border-gray-200 p-3">
+        <Image src="/senanegro.png" width="200" height="200"></Image>
       </div>
       <nav className="flex flex-1 flex-col gap-y-4 pt-10">
         {links.map((link, index) => (
