@@ -7,7 +7,6 @@ export default function AcademicoComponente({ titulo, descripcion, imagen }) {
             <img
               src={imagen}
               alt={titulo}
-              className=""
             />
           </div>
           <div className="w-5/6 p-4 flex flex-col justify-center">

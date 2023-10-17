@@ -9,7 +9,7 @@ export default function NuestraHistoria() {
       <div className="w-1/2 mx-auto border-b-8 border-gray-400 mb-8"></div>
       <div className="bg-gradient-to-t to-green-600 from-white rounded-[20px] rounded-br-[200px] p-10 pr-10 mt-4 h-[23rem] ">
         <p className="text-white text-4xl">
-          Equipo De Desarrollo,
+          Equipo De Desarrollo SENNOVA:
         </p>
         <div className="relative bottom-0 top-16 left-0  right-0 flex justify-center mb-8">
           <img
