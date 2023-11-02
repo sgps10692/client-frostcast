@@ -1,5 +1,6 @@
-import Image from "next/image";
 import ModalMapa from "./Data/Modal";
+import React from "react";
+import Map from "./Map";
 
 async function getUbicaciones() {
   try {
@@ -36,12 +37,7 @@ export default async function WeatherStationPage() {
         {/* Aquí puedes mostrar tu mapa, por ejemplo */}
         <div className="bg-gray-200 w-full h-full rounded-lg">
           {/* Contenido del mapa */}
-          <Image
-            src="/MapaEstaciones2.png"
-            className="w-full h-full object-cover"
-            width={800}
-            height={600}
-          />
+          <Map />
         </div>
       </div>
     </div>

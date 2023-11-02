@@ -4,6 +4,7 @@ import { Line, Bar } from "react-chartjs-2";
 import { DateTime } from "luxon"; // Importa DateTime de luxon
 import "chartjs-adapter-date-fns";
 import { enUS } from "date-fns/locale";
+import WeatherInfo from "./WeatherInfo";
 
 import {
   Chart as ChartJS,
@@ -233,6 +234,12 @@ export default function SelectLocation({ locations }) {
       },
     },
   };
+  const weatherData = {
+    temperature: 25,
+    humidity: 60,
+    precipitation: 10,
+    windSpeed: 5,
+  };
 
   return (
     <>
@@ -298,6 +305,7 @@ export default function SelectLocation({ locations }) {
             <Line data={chartDataTemperatura} options={optionsTemperatura} />
           </div>
         </div>
+        <WeatherInfo {...weatherData} />
       </div>
     </>
   );
