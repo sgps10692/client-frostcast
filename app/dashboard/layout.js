@@ -11,9 +11,9 @@ export default function DashboardLayout({ children }) {
           {/* Menú lateral */}
           <DashboardMenu />
           {/* Contenido principal */}
-          <main className="lg:flex-1 p-4 flex flex-col min-h-screen">
+          <main className="lg:flex-1 px-3 py-1 flex flex-col min-h-screen">
             {/* Encabezado del contenido principal */}
-            <header className="mb-4">
+            <header className="mb-2">
               {/* Contenido del encabezado */}
               <DashboardHeader />
             </header>

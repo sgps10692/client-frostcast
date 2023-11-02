@@ -295,6 +295,11 @@ export default function SelectLocation({ locations }) {
           )}
         </div>
       </div>
+      <div className="grid grid-cols-1 gap-8 mt-5">
+        <div className="p-8 bg-gray-100">
+          <WeatherInfo {...weatherData} />
+        </div>
+      </div>
 
       <div className="grid grid-cols-2 gap-8 mt-5">
         <div className="p-8 bg-gray-100">
@@ -305,7 +310,6 @@ export default function SelectLocation({ locations }) {
             <Line data={chartDataTemperatura} options={optionsTemperatura} />
           </div>
         </div>
-        <WeatherInfo {...weatherData} />
       </div>
     </>
   );

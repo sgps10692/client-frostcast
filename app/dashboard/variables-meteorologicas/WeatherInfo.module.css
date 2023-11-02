@@ -1,22 +1,30 @@
-.weather-info {
+.weatherInfo {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.info-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10px;
+.infoItem {
+  text-align: center;
 }
 
-.info-icon {
-  font-size: 36px;
-  color: #007bff;
+.infoIcon {
+  font-size: 3rem; /* Tamaño del ícono */
+  color: #0077ff; /* Color del ícono */
 }
 
-.info-text {
-  font-size: 20px;
-  margin-top: 4px;
+.infoLabel {
+  font-size: 1.2rem; /* Tamaño de la etiqueta */
+  color: #333; /* Color de la etiqueta */
+  margin-top: 8px; /* Espacio entre la etiqueta y el valor */
+}
+
+.infoText {
+  font-size: 1.5rem; /* Tamaño del valor */
+  font-weight: bold;
+  color: #333; /* Color del valor */
 }

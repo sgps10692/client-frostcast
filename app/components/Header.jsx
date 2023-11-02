@@ -47,8 +47,8 @@ function Header() {
           </Link>
         </ul>
         <div className="flex space-x-9 items-center">
-          <Link href="/login" legacyBehavior>
-            <a className="font-work-sans font-bold text-xl">Iniciar Sesión</a>
+          <Link href="/dashboard" legacyBehavior>
+            <a className="font-work-sans font-bold text-xl">Ir a Dashboard</a>
           </Link>
           <div className="border-r border-black h-6"></div>
           <Link href="/registro" legacyBehavior>

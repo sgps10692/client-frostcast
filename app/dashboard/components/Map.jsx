@@ -16,7 +16,7 @@ const Map = () => {
       container: mapContainer.current,
       style: "mapbox://styles/mapbox/streets-v11", // Estilo de mapa
       center: [-74.297333, 4.570868], // Coordenadas iniciales
-      zoom: 6, // Nivel de zoom
+      zoom: 10, // Nivel de zoom
     });
 
     // Agrega marcadores, capas, etc., según tus necesidades
@@ -26,7 +26,7 @@ const Map = () => {
     };
   }, []);
 
-  return <div ref={mapContainer} style={{ width: "100%", height: "1000px" }} />;
+  return <div ref={mapContainer} style={{ width: "100%", height: "800px" }} />;
 };
 
 export default Map;
