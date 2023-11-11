@@ -48,8 +48,8 @@ export default async function Homeu() {
           </span>{" "}
         </h1>
       </div>
-      <div className="h-screen flex items-center relative">
-        <div className="flex justify-between space-x-8 py-2 px-3">
+      <div className="h-screen flex items-center relative" style={{ flexWrap: 'wrap', overflow: 'auto' }}>
+        <div className="flex flex-col lg:flex-row justify-between space-x-8 space-y-3 lg:space-y-0 py-2 px-3">
           <div className="flex flex-col items-center max-w-md text-center">
             <Image
               src="/desarrollo.png"
@@ -94,7 +94,6 @@ export default async function Homeu() {
               estrategia SENNOVA <a href="/sobre-nosotros" className="text-emerald-900 dark:text-blue-500 hover:underline">Saber Mas..</a>
             </p>
           </div>
-
           <GetPronosticos locations={locations} />
         </div>
       </div>

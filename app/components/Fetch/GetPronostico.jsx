@@ -39,7 +39,7 @@ export default function GetPronosticos({ locations }) {
 
   return (
     <>
-      <div className="bg-white w-1/3 flex flex-col p-6 rounded-md mt-8">
+      <div className="bg-white w-full md:w-1/3 flex flex-col p-6 rounded-md mt-8">
         <h1 className="text-xl font-bold mb-4 text-center">
           CONSULTAR PRONOSTICOS
         </h1>
