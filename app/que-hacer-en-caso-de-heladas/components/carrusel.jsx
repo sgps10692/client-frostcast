@@ -85,32 +85,32 @@ $nextButton.addEventListener('click', () => {
         <>
             <div className="bg-blue-300 py-10 px-8 text-white justify-between">
                 <div className="text-center">
-                    <h2 className="text-4xl font-bold text-blue-800 mb-2 font-work-sans">Seccion Academica</h2>
-                    <h1 className="text-6xl font-bold font-work-sans">!Aprende Con Los Mejores Recursos Educativos¡</h1>
+                    <h2 className="text-2xl md:text-4xl font-bold text-blue-800 mb-2 font-work-sans">Seccion Academica</h2>
+                    <h1 className="text-4xl md:text-6xl font-bold font-work-sans">!Aprende Con Los Mejores Recursos Educativos¡</h1>
                 </div>
                 <div id="animation-carousel" className="relative mt-12 mx-auto max-w-7xl" data-carousel="static">
-                <div className="overflow-hidden relative flex flex-col items-center justify-items-center justify-center h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96 mx-auto max-w-5xl">
-                  <div id="carousel-item-1" className="duration-200 ease-linear flex flex-col items-center justify-items-center justify-center" data-carousel-item>
+                <div className="overflow-hidden relative h-[30em] rounded-lg sm:h-64 xl:h-80 2xl:h-96 mx-auto max-w-5xl">
+                  <div id="carousel-item-1" className="duration-200 ease-linear" data-carousel-item>
                     <AcademicoComponente titulo={'Introducción a la agricultura de precisión:'} descripcion={"Explora cómo la tecnología y el análisis de datos pueden mejorar la eficiencia y la productividad en la agricultura."}
                     imagen={'introduccion.png'}/>
                   </div>
            
-                  <div id="carousel-item-2" className="nduration-200 ease-linear flex flex-col items-center justify-items-center justify-center" data-carousel-item>
+                  <div id="carousel-item-2" className="nduration-200 ease-linear" data-carousel-item>
                     <AcademicoComponente titulo={"Importancia de las variables meteorológicas en la agricultura:"} descripcion={"Descubre cómo las variables como la temperatura, la humedad y la velocidad del viento afectan el crecimiento y desarrollo de los cultivos."}
                     imagen={'Agriculture.png'}/>
                   </div>
            
-                  <div id="carousel-item-3" className="duration-200 ease-linear flex flex-col items-center justify-items-center justify-center" data-carousel-item>
+                  <div id="carousel-item-3" className="duration-200 ease-linear" data-carousel-item>
                     <AcademicoComponente titulo={"Interpretación de los pronósticos y predicciones:"} descripcion={"Aprende a leer e interpretar los datos y las predicciones proporcionados por nuestro modelo de Machine Learning para tomar decisiones informadas."}
                     imagen={'pronosticosC.png'}/>
                   </div>
 
-                  <div id="carousel-item-4" className="duration-200 ease-linear flex flex-col items-center justify-items-center justify-center" data-carousel-item>
+                  <div id="carousel-item-4" className="duration-200 ease-linear" data-carousel-item>
                     <AcademicoComponente titulo={"Estrategias de mitigación de heladas:"} descripcion={"Explora diferentes técnicas y prácticas agrícolas que pueden ayudar a prevenir o minimizar los efectos adversos de las heladas en los cultivos."}
                     imagen={'estrategias.png'}/>
                   </div>
 
-                  <div id="carousel-item-5" className="duration-200 ease-linear flex flex-col items-center justify-items-center justify-center" data-carousel-item>
+                  <div id="carousel-item-5" className="duration-200 ease-linear" data-carousel-item>
                     <AcademicoComponente titulo={"Uso de la plataforma:"} descripcion={"Aprende cómo utilizar nuestra plataforma de manera eficiente para acceder a las predicciones, personalizar tu perfil y aprovechar al máximo las funcionalidades disponibles."}
                     imagen={'usoplataforma.png'}/>
                   </div>
