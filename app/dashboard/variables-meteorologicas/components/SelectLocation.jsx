@@ -37,7 +37,9 @@ export default function SelectLocation({ locations }) {
   const [chartData, setChartData] = useState({});
 
   const fetchPredictionData = async (locationId) => {
-    fetch(`http://127.0.0.1:8000/api/ubicaciones/${locationId}/predicciones`)
+    fetch(
+      `http://127.0.0.1:8000/api/ubicaciones/${locationId}/predicciones/variables`
+    )
       .then((response) => response.json())
       .then((data) => {
         setChartData(data.chart_data);
