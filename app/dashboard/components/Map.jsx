@@ -5,7 +5,7 @@ import mapboxgl from "mapbox-gl";
 export const metadata = {
   stylesheet: "https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css",
 };
-const Map = () => {
+const Map = ({ latitude, longitude, zoom }) => {
   const mapContainer = useRef(null);
 
   useEffect(() => {
@@ -14,17 +14,15 @@ const Map = () => {
 
     const map = new mapboxgl.Map({
       container: mapContainer.current,
-      style: "mapbox://styles/mapbox/streets-v11", // Estilo de mapa
-      center: [-74.297333, 4.570868], // Coordenadas iniciales
-      zoom: 10, // Nivel de zoom
+      style: "mapbox://styles/mapbox/streets-v11",
+      center: [longitude || -74.297333, latitude || 4.570868],
+      zoom: zoom || 10,
     });
 
-    // Agrega marcadores, capas, etc., según tus necesidades
-
     return () => {
-      map.remove(); // Limpia el mapa cuando el componente se desmonta
+      map.remove();
     };
-  }, []);
+  }, [latitude, longitude, zoom]);
 
   return <div ref={mapContainer} style={{ width: "100%", height: "800px" }} />;
 };

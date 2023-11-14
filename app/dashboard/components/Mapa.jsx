@@ -1,6 +1,5 @@
 import ModalMapa from "./Data/Modal";
 import React from "react";
-import Map from "./Map";
 
 async function getUbicaciones() {
   try {
@@ -19,27 +18,5 @@ async function getUbicaciones() {
 export default async function WeatherStationPage() {
   const weatherStations = await getUbicaciones();
 
-  return (
-    <div className="container mx-auto p-6 flex">
-      {/* Columna izquierda con el select */}
-      <div className=" p-4">
-        <h2 className="text-2xl font-bold mb-4">
-          Selecciona una Estación Meteorológica
-        </h2>
-        <ModalMapa locations={weatherStations} />
-      </div>
-
-      {/* Columna derecha con el mapa */}
-      <div className="p-4 w-full">
-        <h2 className="text-2xl text-center font-bold mb-4">
-          Mapa Meteorológico
-        </h2>
-        {/* Aquí puedes mostrar tu mapa, por ejemplo */}
-        <div className="bg-gray-200 w-full h-full rounded-lg">
-          {/* Contenido del mapa */}
-          <Map />
-        </div>
-      </div>
-    </div>
-  );
+  return <ModalMapa locations={weatherStations} />;
 }
