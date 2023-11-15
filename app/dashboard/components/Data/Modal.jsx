@@ -11,6 +11,7 @@ import {
   WiHumidity,
 } from "react-icons/wi";
 import { FaWind, FaCloudRain } from "react-icons/fa";
+import { da } from "date-fns/locale";
 export default function ModalMapa({ locations }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -230,7 +231,11 @@ export default function ModalMapa({ locations }) {
           {/* Aquí puedes mostrar tu mapa, por ejemplo */}
           <div className="bg-gray-200 w-full h-full rounded-lg">
             {/* Contenido del mapa */}
-            <Map latitude={4.6097} longitude={-74.297333} zoom={10} />
+            <Map
+              latitude={data ? data.location.latitude : 4.570868}
+              longitude={data ? data.location.length : -74.297333}
+              zoom={12}
+            />
           </div>
         </div>
       </div>
