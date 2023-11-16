@@ -50,18 +50,6 @@ export default function Register(props) {
               required
             />
           </div>
-          <div className="mb-8">
-            <input
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              className="block w-full rounded-md border-0 py-5 px-52 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:font-work-sans sm:text-lg sm:leading-6 pl-6"
-              placeholder="Contraseña"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-          </div>
           <div className="flex justify-end">
             <button
               type="submit"
@@ -71,12 +59,6 @@ export default function Register(props) {
             </button>
           </div>
         </form>
-        <p className="text-center font-work-sans">
-          ¿Ya Tienes Una Cuenta?{" "}
-          <Link href="/login" className="link-button text-green-500">
-            Inicia Sesión Aquí
-          </Link>
-        </p>
       </div>
     </div>
   );

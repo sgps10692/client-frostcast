@@ -234,7 +234,7 @@ export default function ModalMapa({ locations }) {
             <Map
               latitude={data ? data.location.latitude : 4.570868}
               longitude={data ? data.location.length : -74.297333}
-              zoom={12}
+              zoom={data ? 15 : 10}
             />
           </div>
         </div>

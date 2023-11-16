@@ -7,6 +7,7 @@ export const metadata = {
 };
 const Map = ({ latitude, longitude, zoom }) => {
   const mapContainer = useRef(null);
+  const markerRef = useRef(null);
 
   useEffect(() => {
     mapboxgl.accessToken =
@@ -19,7 +20,19 @@ const Map = ({ latitude, longitude, zoom }) => {
       zoom: zoom || 10,
     });
 
+    markerRef.current = new mapboxgl.Marker()
+      .setLngLat([longitude, latitude])
+      .addTo(map);
+
+    const adjustMarker = () => {
+      const { lng, lat } = map.getCenter();
+      markerRef.current.setLngLat([lng, lat]);
+    };
+
+    map.on("zoom", adjustMarker);
+
     return () => {
+      map.off("zoom", adjustMarker);
       map.remove();
     };
   }, [latitude, longitude, zoom]);
