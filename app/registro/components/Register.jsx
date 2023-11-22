@@ -15,13 +15,15 @@ export default function Register(props) {
         style={{ backgroundImage: `url(/background.jpg)` }}
       />
       <div className="w-1/2 flex flex-col items-center justify-center bg-gray-200 p-8">
-        <Image
-          src="/colombia2.png"
-          alt="Logo Formulario"
-          className="w-72 mx-auto mb-20 mt-8"
-          width={250}
-          height={25}
-        />
+        <Link href="/">
+          <Image
+            src="/colombia2.png"
+            alt="Logo Formulario"
+            className="w-72 mx-auto mb-20 mt-8"
+            width={250}
+            height={25}
+          />
+        </Link>
         <h1 className="flex font-bold font-work-sans mb-6 text-center">
           <span className="text-black text-6xl">Frost </span>
           <span className="text-green-600 text-6xl">Cast</span>
