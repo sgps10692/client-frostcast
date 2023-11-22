@@ -1,5 +1,5 @@
 import React from "react";
-
+import Image from "next/image";
 export default function NuestraHistoria() {
   return (
     <div>
@@ -12,10 +12,10 @@ export default function NuestraHistoria() {
           Equipo De Desarrollo SENNOVA:
         </p>
         <div className="relative bottom-0 top-16 left-0  right-0 flex justify-center mb-8">
-          <img
-            src="nosotros.jpg"
+          <Image
+            src="/nosotroshd.png"
             alt="Imagen de la sección"
-            width={1000} height={1000}
+            width={700} height={600}
             className="rounded-tl-[200px] mb-8 rounded-[20px]"
           />
         </div>
