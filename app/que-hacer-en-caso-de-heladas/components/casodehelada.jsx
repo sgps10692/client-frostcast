@@ -1,9 +1,11 @@
 export default function CasoDeHeladaComponente() {
-    return (
-        <>
-        <header className="bg-green-500 p-4 text-white">
+  return (
+    <>
+      <header className="bg-sky-500 p-4 text-white">
         <div className="container mx-auto">
-          <h1 className="text-3xl font-semibold">Qué Hacer en Caso de Helada</h1>
+          <h1 className="text-3xl font-semibold">
+            Qué Hacer en Caso de Helada
+          </h1>
         </div>
       </header>
       <div className="container mx-auto py-8">
@@ -67,6 +69,6 @@ export default function CasoDeHeladaComponente() {
           </p>
         </div>
       </div>
-        </>
-    );
+    </>
+  );
 }

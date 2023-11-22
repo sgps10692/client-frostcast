@@ -4,16 +4,25 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Register(props) {
+export default function Register() {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    alert("Registrado con exito");
+
+    window.location.href = "/";
+  };
   return (
     <div className="flex items-stretch justify-center h-screen">
       <div
         className="w-1/2 bg-cover bg-center"
         style={{ backgroundImage: `url(/background.jpg)` }}
       />
+
       <div className="w-1/2 flex flex-col items-center justify-center bg-gray-200 p-8">
         <Link href="/">
           <Image
@@ -28,7 +37,7 @@ export default function Register(props) {
           <span className="text-black text-6xl">Frost </span>
           <span className="text-green-600 text-6xl">Cast</span>
         </h1>
-        <form className="mb-4">
+        <form className="mb-4" onSubmit={handleSubmit}>
           <div className="mb-8">
             <input
               type="text"
@@ -61,6 +70,12 @@ export default function Register(props) {
             </button>
           </div>
         </form>
+        <div className="text-center mb-8 bg-green-200 p-8 rounded-lg shadow-md max-w-md w-full">
+          <h2 className="text-2xl font-bold text-green-800 mb-4">
+            ¡Regístrate para obtener las alertas de las últimas predicciones en
+            tu correo!
+          </h2>
+        </div>
       </div>
     </div>
   );

@@ -25,10 +25,6 @@ const QueEs = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-black font-work-sans">
               ¡Predecir las próximas heladas!
             </h1>
-            <p className="text-sm md:text-lg mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br></br>
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-around mt-20 items-center">
@@ -39,13 +35,14 @@ const QueEs = () => {
             <h1 className="text-4xl md:text-6xl font-bold text-black font-work-sans">
               ¡Predicción de variables meteorológicas!
             </h1>
-            <p className="text-sm md:text-lg mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br></br>
-              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
           </div>
           <div className="mx-40 md:w-1/2">
-            <Image src="/prediccion.png" alt="Imagen 1" width={400} height={20} />
+            <Image
+              src="/prediccion.png"
+              alt="Imagen 1"
+              width={400}
+              height={20}
+            />
           </div>
         </div>
       </div>
